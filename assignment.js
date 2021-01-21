@@ -53,7 +53,12 @@ function budgetCalculator(watch,phone,laptop){
 
 function hotelCost (stayDay){
     var totalCost = 0;
-    if (stayDay <= 10){
+    if (stayDay < 0){
+        // If user input negative value this error message will be shown
+        
+        return " stayDay can't be a negative value. Please Input a positive value";
+    }
+    else if (stayDay <= 10){
         totalCost = 100 * stayDay ;
     }
     else if (stayDay <= 20){
@@ -62,7 +67,17 @@ function hotelCost (stayDay){
         var secondPart = 80 * remainingDay;
         totalCost = firstPart + secondPart;
     }
+    else {
+        var firstPart = 100 * 10;
+        var secondPart = 80 * 10;
+        var remainingDay = stayDay - 20;
+        var thirdPart = 50 * remainingDay;
+        totalCost = firstPart + secondPart + thirdPart;
+    }
 
-
+    return totalCost;
 
 }
+
+
+// Task 4 
