@@ -58,15 +58,21 @@ function hotelCost (stayDay){
         
         return " stayDay can't be a negative value. Please Input a positive value";
     }
+
+    //if user stays between 1-10 days
     else if (stayDay <= 10){
         totalCost = 100 * stayDay ;
     }
+
+    // if user stays more than 10 day 
     else if (stayDay <= 20){
         var firstPart = 100 * 10;
         var remainingDay = stayDay - 10;
         var secondPart = 80 * remainingDay;
         totalCost = firstPart + secondPart;
     }
+
+    // if user stays more that 20 days
     else {
         var firstPart = 100 * 10;
         var secondPart = 80 * 10;
@@ -75,9 +81,14 @@ function hotelCost (stayDay){
         totalCost = firstPart + secondPart + thirdPart;
     }
 
+    // total cost of staying at hotel 
+
     return totalCost;
 
 }
+var result = hotelCost(17);
+console.log(result);
 
+// Task 4 megaFriend 
 
-// Task 4 
+// dellete it after code complete . if array is faka then return array can't be empty .  array.length <=0 
