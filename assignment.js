@@ -1,4 +1,4 @@
-//
+// https://github.com/fardinkhan69/assignment-3
 
 //Task 1 : kilometerToMeter
 
@@ -12,25 +12,29 @@ function kilometerToMeter(kilometer) {
     return meter;
 }
 
+// var result1 = kilometerToMeter(52);
+// console.log(result1);
+
+var result1 = kilometerToMeter(-52);
+console.log(result1);
 
 // Task 2: budgetCalculator
 
+//watch,phone,laptop = quantity of these things you want to buy
+
 function budgetCalculator(watch, phone, laptop) {
-    if (watch < 0) {
+    if (watch < 0 || phone < 0 || laptop < 0) {
         // If user input negative value this error message will be shown
 
-        return " watch quantity can't be a negative value. Please Input a positive value";
+        return "  quantity can't be a negative value. Please Input a positive value";
     }
-    else if (phone < 0) {
-        // If user input negative value this error message will be shown
 
-        return " Phone quantity can't be a negative value. Please Input a positive value";
-    }
-    else if (laptop < 0) {
-        // If user input negative value this error message will be shown
+    else if (watch % 1 != 0 || phone % 1 != 0 || laptop % 1 != 0){
 
-        return " Laptop quantity can't be a negative value. Please Input a positive value";
+        // so that float number is not accepted by program
+        return "your value is not proper .Quantity can't be a float number . Please input a intiger number" 
     }
+   
     // watch,phone ,laptop usual prices ;
 
     var watchPrice = 50;
@@ -49,7 +53,16 @@ function budgetCalculator(watch, phone, laptop) {
     return total;
 }
 
+
+// var result2 = budgetCalculator(1,2.5,2);
+// console.log(result2);
+
+var result2 = budgetCalculator(1,2,2);
+console.log(result2);
+
 // Task 3 : hotelCost
+
+//stayDay = how many days you want to stay ;
 
 function hotelCost(stayDay) {
     var totalCost = 0;
@@ -57,6 +70,12 @@ function hotelCost(stayDay) {
         // If user input negative value this error message will be shown
 
         return " stayDay can't be a negative value. Please Input a positive value";
+    }
+
+    //if user input a float number
+
+    if(stayDay % 1 != 0){
+        return " stayDay can't be a float number . Please Input a intiger value"
     }
 
     //if user stays between 1-10 days
@@ -86,8 +105,12 @@ function hotelCost(stayDay) {
     return totalCost;
 
 }
-var result = hotelCost(17);
-console.log(result);
+
+// var result3 = hotelCost(17);
+// console.log(result3);
+
+ var wrongInput = hotelCost(-3);
+ console.log(wrongInput);
 
 // Task 4 megaFriend 
 
@@ -113,5 +136,13 @@ function megaFriend(friendsName) {
 
 }
 
+
+// var friends = ["Riyad","Mahmudul","Tano","Naima","Rafa"];
+// var result4 = megaFriend(friends);
+// console.log(result4);
+
+// var friends2 = [];
+// var result5 = megaFriend(friends2);
+// console.log(result5)
 
 
