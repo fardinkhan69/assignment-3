@@ -106,11 +106,11 @@ function hotelCost(stayDay) {
 
 }
 
-// var result3 = hotelCost(17);
-// console.log(result3);
+var result3 = hotelCost(17);
+console.log(result3);
 
- var wrongInput = hotelCost(-3);
- console.log(wrongInput);
+//  var wrongInput = hotelCost(-3);
+//  console.log(wrongInput);
 
 // Task 4 megaFriend 
 
@@ -137,9 +137,9 @@ function megaFriend(friendsName) {
 }
 
 
-// var friends = ["Riyad","Mahmudul","Tano","Naima","Rafa"];
-// var result4 = megaFriend(friends);
-// console.log(result4);
+ var friends = ["Riyad","Mahmudul","Tano","Naima","Rafa"];
+ var result4 = megaFriend(friends);
+ console.log(result4);
 
 // var friends2 = [];
 // var result5 = megaFriend(friends2);
