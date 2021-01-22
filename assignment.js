@@ -2,11 +2,11 @@
 
 //Task 1 : kilometerToMeter
 
-function kilometerToMeter(kilometer){
-    if(kilometer < 0){
+function kilometerToMeter(kilometer) {
+    if (kilometer < 0) {
         // If user input negative value this error message will be shown
-        
-        return " Kilometer can't be a negative value. Please Input a positive value";
+
+        return " Distance can't be a negative value. Please Input a positive value";
     }
     var meter = kilometer * 1000;
     return meter;
@@ -15,21 +15,21 @@ function kilometerToMeter(kilometer){
 
 // Task 2: budgetCalculator
 
-function budgetCalculator(watch,phone,laptop){
-    if(watch < 0){
+function budgetCalculator(watch, phone, laptop) {
+    if (watch < 0) {
         // If user input negative value this error message will be shown
-        
-        return " watch can't be a negative value. Please Input a positive value";
+
+        return " watch quantity can't be a negative value. Please Input a positive value";
     }
-    else if (phone < 0){
+    else if (phone < 0) {
         // If user input negative value this error message will be shown
-        
-        return " Phone can't be a negative value. Please Input a positive value";
+
+        return " Phone quantity can't be a negative value. Please Input a positive value";
     }
-    else if(laptop < 0){
+    else if (laptop < 0) {
         // If user input negative value this error message will be shown
-        
-        return " Laptop can't be a negative value. Please Input a positive value";
+
+        return " Laptop quantity can't be a negative value. Please Input a positive value";
     }
     // watch,phone ,laptop usual prices ;
 
@@ -46,26 +46,26 @@ function budgetCalculator(watch,phone,laptop){
 
     total = totalWatchPrice + totalPhonePrice + totalLaptopPrice;
 
-    return total ;
+    return total;
 }
 
 // Task 3 : hotelCost
 
-function hotelCost (stayDay){
+function hotelCost(stayDay) {
     var totalCost = 0;
-    if (stayDay < 0){
+    if (stayDay < 0) {
         // If user input negative value this error message will be shown
-        
+
         return " stayDay can't be a negative value. Please Input a positive value";
     }
 
     //if user stays between 1-10 days
-    else if (stayDay <= 10){
-        totalCost = 100 * stayDay ;
+    else if (stayDay <= 10) {
+        totalCost = 100 * stayDay;
     }
 
     // if user stays more than 10 day 
-    else if (stayDay <= 20){
+    else if (stayDay <= 20) {
         var firstPart = 100 * 10;
         var remainingDay = stayDay - 10;
         var secondPart = 80 * remainingDay;
@@ -91,4 +91,27 @@ console.log(result);
 
 // Task 4 megaFriend 
 
-// dellete it after code complete . if array is faka then return array can't be empty .  array.length <=0 
+
+function megaFriend(friendsName) {
+
+    var biggestName = friendsName[0];
+
+    if (friendsName.length == 0){
+        //If user input empty array this message will be shown
+        return "Array can't be empty in This case. Please provide some values"
+    }
+    for (var i = 0; i < friendsName.length; i++) {
+
+        var tempContainer = friendsName[i];
+
+        if (tempContainer.length > biggestName.length) {
+            biggestName = tempContainer;
+        }
+    }
+    return biggestName;
+
+
+}
+
+
+
